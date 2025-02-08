@@ -101,7 +101,7 @@ fn flood_segmentation(path:&Path,width:usize,height:usize,symbols:&mut Vec<Vec<u
         scaled_image.save(path).unwrap();
     }
     //Export bounds
-    let bounds_str = String::from(format!("{:.?}",bounds));
+    let bounds_str = String::from(format!("{:?}",bounds));
     fs::write("splitInfo.txt",bounds_str).unwrap();
     println!("{} : Flood segmented",time(start));
 
